@@ -1,0 +1,14 @@
+{
+  "name": "fitpulse",
+  "version": "1.0.0",
+  "description": "Fitness tracking application",
+  "type": "module",
+  "scripts": {
+    "dev": "cd backend && npm run dev",
+    "start": "cd backend && npm start",
+    "install-all": "npm install && cd backend && npm install"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3"
+  }
+}

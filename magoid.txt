@@ -1,0 +1,3 @@
+EczG1cGpIc41iCVu
+ajayrawatuk07_db_user
+mongodb+srv://ajayrawatuk07_db_user:EczG1cGpIc41iCVu@cluster1.blpvuag.mongodb.net/?appName=Cluster1
