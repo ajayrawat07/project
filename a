@@ -1,0 +1,27 @@
+DECLARE
+    CURSOR c_product IS
+        SELECT supplier_id, quantity
+        FROM products
+        WHERE quantity > 100
+        AND product_name IS NOT NULL;
+
+    v_supplier_id products.supplier_id%TYPE;
+    v_quantity    products.quantity%TYPE;
+
+BEGIN
+    OPEN c_product;
+
+    LOOP
+        FETCH c_product INTO v_supplier_id, v_quantity;
+
+        EXIT WHEN c_product%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE(
+            'Supplier ID: ' || v_supplier_id ||
+            ' Quantity: ' || v_quantity
+        );
+    END LOOP;
+
+    CLOSE c_product;
+END;
+/
