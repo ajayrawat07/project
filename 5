@@ -1,0 +1,9 @@
+SELECT s.supplier_name,
+       so.product_name,
+       so.quantity
+FROM Suppliers s
+JOIN SupplyOrders so
+ON s.supplier_id = so.supplier_id
+WHERE so.quantity > 20
+  AND s.rating >= 3
+  AND so.product_name <> 'Pen';
