@@ -1,0 +1,10 @@
+SELECT supplier_id,
+       SUM(quantity) AS total_quantity,
+       MAX(quantity) AS maximum_quantity
+FROM SupplyOrders
+WHERE quantity > 10
+  AND quantity + 20 > 100
+  AND order_id > 100
+GROUP BY supplier_id
+HAVING SUM(quantity) > 100
+   AND MAX(quantity) > 30;
