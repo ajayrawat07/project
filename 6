@@ -1,0 +1,9 @@
+SELECT s.supplier_name,
+       s.city,
+       so.product_name,
+       so.quantity
+FROM Suppliers s
+LEFT JOIN SupplyOrders so
+ON s.supplier_id = so.supplier_id
+WHERE s.rating >= 2
+  AND so.quantity > 10;
